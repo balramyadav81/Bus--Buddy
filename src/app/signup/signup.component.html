@@ -1,0 +1,42 @@
+
+
+
+
+<header>
+  <h1>Signup for Bus Fare Buddy</h1>
+</header>
+<form (ngSubmit)="submitForm()" #userForm="ngForm">
+  <label for="username">Username:</label>
+  <input [(ngModel)]="user.username" type="text" id="username" name="username" required><br><br>
+
+  <label for="email">Email:</label>
+  <input [(ngModel)]="user.email" type="email" id="email" name="email" required pattern=".+@gmail\.com$">
+  <div *ngIf="userForm.controls['email']?.hasError('pattern') && !userForm.controls['email'].hasError('required')">
+    Please enter a valid Gmail address.
+  </div><br><br>
+
+  <label for="age">Age:</label>
+  <input [(ngModel)]="user.age" type="text" id="age" name="age" required><br><br>
+
+  <label for="gender">Gender:</label>
+  <select [(ngModel)]="user.gender" id="gender" name="gender" required>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+    <option value="Other">Other</option>
+  </select><br><br>
+
+  <label for="contact">Contact No:</label>
+  <input [(ngModel)]="user.contact" type="text" id="contact" name="contact" required pattern="[0-9]{10}">
+  <div *ngIf="userForm.controls['contact']?.hasError('pattern') && !userForm.controls['contact'].hasError('required')">
+    Please enter a valid 10-digit contact number.
+  </div><br><br>
+
+  <label for="password">Password:</label>
+  <input [(ngModel)]="user.password" type="password" id="password" name="password" required minlength="9">
+  <div
+    *ngIf="userForm.controls['password']?.hasError('minlength') && !userForm.controls['password'].hasError('required')">
+    Password must be at least 9 characters long.
+  </div><br><br>
+
+  <button mat-button color="primary" [disabled]="userForm.invalid">Submit</button>
+</form>

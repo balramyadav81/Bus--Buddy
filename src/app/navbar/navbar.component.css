@@ -1,0 +1,6 @@
+.navbar-brand {
+    color: rgb(250, 114, 2); /* Set text color */
+    font-size: 20px; /* Set font size */
+    text-decoration: none; /* Remove underline from the link */
+    font-weight: bold; /* Make the text bold if needed */
+}

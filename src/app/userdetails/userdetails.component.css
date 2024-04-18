@@ -1,0 +1,25 @@
+/* styles.css */
+
+/* Apply styles to the outer container */
+div {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Style the labels */
+label {
+    display: inline-block;
+    width: 120px;
+    font-weight: bold;
+}
+
+/* Style the user information */
+b {
+    color: #007bff; /* or any color you prefer */
+}
+
+/* Add spacing between user information */
+div > div {
+    margin-bottom: 10px;
+}

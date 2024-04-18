@@ -1,0 +1,45 @@
+<head>
+    <title>Book a Ticket - Bus Buddy</title>
+
+</head>
+
+
+<body>
+    <header>
+        <h1>Book Your Bus Ticket</h1>
+    </header>
+
+    <section>
+        <h2>Booking Information</h2>
+        <form th:action="@{/booking}" method="get">
+            <label for="bus_Type">Select Bus Type:</label>
+            <select id="bus_Type" name="bus_Type">
+                <option value="Economy">Economy</option>
+                <option value="Sleeper">Sleeper</option>
+                <option value="AC">AC</option>
+            </select><br><br>
+            <label for="source">Source:</label>
+            <input type="text" id="source" name="source" required><br><br>
+            <label for="destination">Destination:</label>
+            <input type="text" id="destination" name="destination" required><br><br>
+            <label for="date">Travel Date:</label>
+            <input type="date" id="date" name="date" required><br><br>
+
+            <h3>Passenger Details</h3>
+            <article class="name">
+                <label for="name">Passenger Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select><br><br>
+                <label for="age">Age:</label>
+                <input type="text" id="age" name="age" required><br><br>
+            </article>
+
+            <button type="submit">Book Tickets</button>
+        </form>
+    </section>
+</body>

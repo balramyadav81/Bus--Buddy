@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+
+<head>
+    <title>Login - Bus Fare Buddy</title>
+    <link rel="stylesheet" href="../static/Style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Login to Bus Fare Buddy</h1>
+    </header>
+    <form action="/login" method="post">
+        
+      
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <button type="submit">Login</button>
+        <a class="forgetpass" href="/updatePassword">Forgot Password</a>
+    
+    </form>
+</body>
+
+</html>

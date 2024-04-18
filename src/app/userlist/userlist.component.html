@@ -1,0 +1,47 @@
+<body>
+    <header>
+        <h1>User List</h1>
+    </header>
+    <table *ngIf="users" border="">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Contact No</th>
+                <th>Password</th>
+                <th>Actions</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Add ngFor loop to iterate over users -->
+            <!-- Replace the sample data with your actual data -->
+            <tr *ngFor="let user of users">
+                <th>{{user.id}}</th>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.age }}</td>
+                <td>{{ user.gender }}</td>
+                <td>{{ user.contact }}</td>
+                <td>{{ user.password }}</td>
+
+                <td>
+               
+                <!-- <td>   <button (click)="deleteUser(user.id)" class="btn btn-danger"
+                        style="margin-left: 80px;">Delete</button> -->
+
+                        <button (click) = "updateUser(user.id)" class = "btn btn-info"> Update</button>
+                        <button (click) = "deleteUser(user.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                        <button (click) = "userDetails(user.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            
+                </td>
+
+                <!-- <td><button (click)="updateUser(user.id)" class="btn btn-primary">Update Password</button>
+                </td> -->
+            </tr>
+
+        </tbody>
+    </table>
